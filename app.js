@@ -65,14 +65,7 @@ downloadButton.addEventListener('click', () => {
     if (!response.ok) throw new Error('Release information is unavailable.');
     const text = await response.text();
     if (text.length > 32768) throw new Error('Release information is invalid.');
-    const value = JSON.parse(text);
-    if (value?.schemaVersion === 1 && value.pending === true) {
-      downloadButton.disabled = true;
-      downloadStatus.textContent = 'The first automated release is building; downloads appear after verification.';
-      document.querySelector('#release-note').textContent = 'The first automated release is building; downloads appear after verification.';
-      return;
-    }
-    release = validRelease(value);
+    release = validRelease(JSON.parse(text));
     document.querySelectorAll('[data-release-version]').forEach(element => { element.textContent = `v${release.version}`; });
     selectPlatform(selectedPlatform);
     downloadButton.disabled = false;
