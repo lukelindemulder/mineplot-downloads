@@ -1,34 +1,34 @@
 {
   "schemaVersion": 1,
   "repository": "lukelindemulder/mineplot-downloads",
-  "version": "1.0.1-preview.3",
-  "tag": "v1.0.1-preview.3",
+  "version": "1.0.1-preview.4",
+  "tag": "v1.0.1-preview.4",
   "channel": "preview",
   "public": true,
-  "releaseUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/tag/v1.0.1-preview.3",
-  "checksumsUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.1-preview.3/SHA256SUMS.txt",
+  "releaseUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/tag/v1.0.1-preview.4",
+  "checksumsUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.1-preview.4/SHA256SUMS.txt",
   "signing": {
     "macSigned": false,
     "windowsSigned": false
   },
   "platforms": {
     "windows": {
-      "filename": "MinePlot-Setup-1.0.1-preview.3-x64.exe",
-      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.1-preview.3/MinePlot-Setup-1.0.1-preview.3-x64.exe",
-      "sha256": "f89c9476ecb2ee6a412a8178266352bf07267e2c03fa61c7b4329eb214a4a638",
-      "bytes": 123020847
+      "filename": "MinePlot-Setup-1.0.1-preview.4-x64.exe",
+      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.1-preview.4/MinePlot-Setup-1.0.1-preview.4-x64.exe",
+      "sha256": "fbc05aeb10f2cdfaa7469d5c90a22bb70a1ee7b5568e6b7084b751f1fa57ecd3",
+      "bytes": 123020553
     },
     "linux": {
-      "filename": "MinePlot-1.0.1-preview.3-linux-x86_64.AppImage",
-      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.1-preview.3/MinePlot-1.0.1-preview.3-linux-x86_64.AppImage",
-      "sha256": "f03e4b704818c6c524baf46afbf3e90bcec943364c153259444774b7ed234a2b",
-      "bytes": 122593933
+      "filename": "MinePlot-1.0.1-preview.4-linux-x86_64.AppImage",
+      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.1-preview.4/MinePlot-1.0.1-preview.4-linux-x86_64.AppImage",
+      "sha256": "0253247443ae471aa47c9ae068388ee75831f6ef4ec008e85a899778af9354c2",
+      "bytes": 122593954
     },
     "macos": {
-      "filename": "MinePlot-1.0.1-preview.3-macos-arm64.zip",
-      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.1-preview.3/MinePlot-1.0.1-preview.3-macos-arm64.zip",
-      "sha256": "05783961e67a1990f275554f86c1f2286c4e3853da5acab7505b7d23e376b061",
-      "bytes": 122340430
+      "filename": "MinePlot-1.0.1-preview.4-macos-arm64.zip",
+      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.1-preview.4/MinePlot-1.0.1-preview.4-macos-arm64.zip",
+      "sha256": "1be2d823aa0afac7485ad70b5a472d69337dde747924284c4e2d976c4bd553ed",
+      "bytes": 122340433
     }
   }
 }
