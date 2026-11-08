@@ -26,6 +26,7 @@ function validRelease(value) {
   if (value.releaseUrl !== `${base}tag/${value.tag}` || value.checksumsUrl !== `${base}download/${value.tag}/SHA256SUMS.txt`) throw new Error('Release information is invalid.');
   for (const platform of Object.keys(platforms)) {
     const item = value.platforms?.[platform];
+    if (platform === 'windows' && !item && value.windowsPaused === true) continue;
     const names = platform === 'windows' ? [`MinePlot-Setup-${value.version}-x64.exe`] : platform === 'linux' ? [`MinePlot-${value.version}-linux-x64.AppImage`, `MinePlot-${value.version}-linux-x86_64.AppImage`] : [`MinePlot-${value.version}-arm64.zip`, `MinePlot-${value.version}-macos-arm64.zip`];
     if (!item || !names.includes(item.filename) || item.url !== `${base}download/${value.tag}/${encodeURIComponent(item.filename)}` || !/^[a-f0-9]{64}$/i.test(item.sha256) || !Number.isSafeInteger(item.bytes) || item.bytes <= 0 || item.bytes > 2 * 1024 ** 3) throw new Error('Release information is invalid.');
   }
@@ -53,7 +54,8 @@ function selectPlatform(platform) {
   const note = underReview ? 'Windows downloads paused' : unsigned || value.format;
   document.querySelector('#release-note').textContent = `v${release.version} · Preview build · ${note}`;
   checksumsLink.href = release.checksumsUrl;
-  checksumsLink.title = `${release.platforms[platform].filename}\nSHA-256: ${release.platforms[platform].sha256}`;
+  const item = release.platforms[platform];
+  checksumsLink.title = item ? `${item.filename}\nSHA-256: ${item.sha256}` : 'Windows downloads are under security review.';
   downloadStatus.textContent = '';
 }
 platformButtons.forEach(button => button.addEventListener('click', () => selectPlatform(button.dataset.platform)));
