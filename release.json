@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "repository": "lukelindemulder/mineplot-downloads",
-  "version": "1.0.1-preview.12",
-  "tag": "v1.0.1-preview.12",
-  "channel": "preview",
+  "version": "1.0.14",
+  "tag": "v1.0.14",
+  "channel": "latest",
   "public": true,
-  "releaseUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/tag/v1.0.1-preview.12",
-  "checksumsUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.1-preview.12/SHA256SUMS.txt",
+  "releaseUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/tag/v1.0.14",
+  "checksumsUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.14/SHA256SUMS.txt",
   "signing": {
     "macSigned": true,
     "windowsSigned": false
@@ -14,16 +14,16 @@
   "windowsPaused": true,
   "platforms": {
     "linux": {
-      "filename": "MinePlot-1.0.1-preview.12-linux-x86_64.AppImage",
-      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.1-preview.12/MinePlot-1.0.1-preview.12-linux-x86_64.AppImage",
-      "sha256": "d455d02d053d58944970343ea96e2f788c83763582f0a7b20bb908d85db2670c",
-      "bytes": 122598118
+      "filename": "MinePlot-1.0.14-linux-x86_64.AppImage",
+      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.14/MinePlot-1.0.14-linux-x86_64.AppImage",
+      "sha256": "a9b310cdf0c2f82a3a6099184f171d9132a509e4b70378eed15b7b60a45f67df",
+      "bytes": 122598074
     },
     "macos": {
-      "filename": "MinePlot-1.0.1-preview.12-macos-arm64.zip",
-      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.1-preview.12/MinePlot-1.0.1-preview.12-macos-arm64.zip",
-      "sha256": "3b26a0f8f2b0d0dabfcdd317cb4adbf93ee8c8073135e0e204439fb38bb195d5",
-      "bytes": 121131850
+      "filename": "MinePlot-1.0.14-macos-arm64.zip",
+      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.14/MinePlot-1.0.14-macos-arm64.zip",
+      "sha256": "c79aa9fcdc97b5ae8180589fcec0afc2104c3bbc70a743fb5ca67f0f42fef5ba",
+      "bytes": 121131872
     }
   }
 }

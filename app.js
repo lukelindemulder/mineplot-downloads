@@ -21,7 +21,7 @@ let selectedPlatform = 'macos';
 let release;
 downloadButton.disabled = true;
 function validRelease(value) {
-  if (!value || value.schemaVersion !== 1 || value.public !== true || !/^[A-Za-z0-9][A-Za-z0-9-]{0,38}\/[A-Za-z0-9_.-]{1,100}$/.test(value.repository) || !/^\d+\.\d+\.\d+(?:-[A-Za-z0-9]+(?:\.[A-Za-z0-9]+)*)?$/.test(value.version) || value.tag !== `v${value.version}` || value.channel !== 'preview') throw new Error('Release information is invalid.');
+  if (!value || value.schemaVersion !== 1 || value.public !== true || !/^[A-Za-z0-9][A-Za-z0-9-]{0,38}\/[A-Za-z0-9_.-]{1,100}$/.test(value.repository) || !/^(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)$/.test(value.version) || value.tag !== `v${value.version}` || value.channel !== 'latest' || value.signing?.macSigned !== true) throw new Error('Release information is invalid.');
   const base = `https://github.com/${value.repository}/releases/`;
   if (value.releaseUrl !== `${base}tag/${value.tag}` || value.checksumsUrl !== `${base}download/${value.tag}/SHA256SUMS.txt`) throw new Error('Release information is invalid.');
   for (const platform of Object.keys(platforms)) {
@@ -50,9 +50,8 @@ function selectPlatform(platform) {
     downloadButton.append(format);
   }
   if (!release) return;
-  const unsigned = platform === 'macos' && !release.signing?.macSigned ? 'Unsigned and not notarized. macOS may block this preview.' : '';
-  const note = underReview ? 'Windows downloads paused' : unsigned || value.format;
-  document.querySelector('#release-note').textContent = `v${release.version} · Preview build · ${note}`;
+  const note = underReview ? 'Windows downloads paused' : platform === 'macos' ? 'Signed and notarized · ' + value.format : value.format;
+  document.querySelector('#release-note').textContent = `v${release.version} · ${note}`;
   checksumsLink.href = release.checksumsUrl;
   const item = release.platforms[platform];
   checksumsLink.title = item ? `${item.filename}\nSHA-256: ${item.sha256}` : 'Windows downloads are under security review.';
