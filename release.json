@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "repository": "lukelindemulder/mineplot-downloads",
-  "version": "1.0.15",
-  "tag": "v1.0.15",
+  "version": "1.0.16",
+  "tag": "v1.0.16",
   "channel": "latest",
   "public": true,
-  "releaseUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/tag/v1.0.15",
-  "checksumsUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.15/SHA256SUMS.txt",
+  "releaseUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/tag/v1.0.16",
+  "checksumsUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.16/SHA256SUMS.txt",
   "signing": {
     "macSigned": true,
     "windowsSigned": false
@@ -14,16 +14,16 @@
   "windowsPaused": true,
   "platforms": {
     "linux": {
-      "filename": "MinePlot-1.0.15-linux-x86_64.AppImage",
-      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.15/MinePlot-1.0.15-linux-x86_64.AppImage",
-      "sha256": "7ac509ce6bb1db8d387ec4301826299e4cccd5c6899c9f88356edb2f96cc54c1",
-      "bytes": 122598021
+      "filename": "MinePlot-1.0.16-linux-x86_64.AppImage",
+      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.16/MinePlot-1.0.16-linux-x86_64.AppImage",
+      "sha256": "f264f664f6cc212bf08129c35850791c68148d963551d0d2fc63fc47876fdc7a",
+      "bytes": 122618670
     },
     "macos": {
-      "filename": "MinePlot-1.0.15-macos-arm64.zip",
-      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.15/MinePlot-1.0.15-macos-arm64.zip",
-      "sha256": "7a885aa4f0b377b77a9008d19cfabb3fc3e13a8aa84d7f20c57cd5e2b0cbb4f0",
-      "bytes": 121132040
+      "filename": "MinePlot-1.0.16-macos-arm64.zip",
+      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.0.16/MinePlot-1.0.16-macos-arm64.zip",
+      "sha256": "55ccc66ebabda592a4368ced147873915be347aa4e7da4354134422462e2320c",
+      "bytes": 121153441
     }
   }
 }
