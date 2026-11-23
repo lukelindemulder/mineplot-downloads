@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "repository": "lukelindemulder/mineplot-downloads",
-  "version": "1.1.0",
-  "tag": "v1.1.0",
+  "version": "1.1.2",
+  "tag": "v1.1.2",
   "channel": "latest",
   "public": true,
-  "releaseUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/tag/v1.1.0",
-  "checksumsUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.1.0/SHA256SUMS.txt",
+  "releaseUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/tag/v1.1.2",
+  "checksumsUrl": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.1.2/SHA256SUMS.txt",
   "signing": {
     "macSigned": true,
     "windowsSigned": false
@@ -14,22 +14,22 @@
   "windowsPaused": false,
   "platforms": {
     "windows": {
-      "filename": "MinePlot-Setup-1.1.0-x64.exe",
-      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.1.0/MinePlot-Setup-1.1.0-x64.exe",
-      "sha256": "161eaed02ce727e481e71616485be223a090092134d5e80faad2bfb5fe7c40c3",
-      "bytes": 123059776
+      "filename": "MinePlot-Setup-1.1.2-x64.exe",
+      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.1.2/MinePlot-Setup-1.1.2-x64.exe",
+      "sha256": "3b77bb006c391bc4309dc73a529ac4ceb9752feddbd639dded7524c2ea525e78",
+      "bytes": 123060041
     },
     "linux": {
-      "filename": "MinePlot-1.1.0-linux-x86_64.AppImage",
-      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.1.0/MinePlot-1.1.0-linux-x86_64.AppImage",
-      "sha256": "70b711f92b7c2bb21d99c558c69c1960905e868875e2cbe1340365c24de2ab96",
-      "bytes": 122622864
+      "filename": "MinePlot-1.1.2-linux-x86_64.AppImage",
+      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.1.2/MinePlot-1.1.2-linux-x86_64.AppImage",
+      "sha256": "50dfbefe7ed17b50a0ad5bc4fb0967e78090ead48fb7d8ae4a12982890f3c599",
+      "bytes": 122622825
     },
     "macos": {
-      "filename": "MinePlot-1.1.0-macos-arm64.zip",
-      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.1.0/MinePlot-1.1.0-macos-arm64.zip",
-      "sha256": "fc0052638e37c3ec43cd4ed8acc6a132101c59fb002afcc89303006f5c39431b",
-      "bytes": 122466236
+      "filename": "MinePlot-1.1.2-macos-arm64.zip",
+      "url": "https://github.com/lukelindemulder/mineplot-downloads/releases/download/v1.1.2/MinePlot-1.1.2-macos-arm64.zip",
+      "sha256": "6c2c931929de5062f02c778f0bc32fac36a81eb460fdb1dcf266b757b19201f8",
+      "bytes": 122466837
     }
   }
 }
