@@ -10,7 +10,7 @@ document.querySelectorAll('[data-theme]').forEach(button => button.addEventListe
 
 const platforms = {
   macos: { title: 'macOS · Apple silicon', label: 'macOS', format: 'ZIP · Apple silicon', description: 'For Macs with an M-series chip. Extract the ZIP and move MinePlot to Applications. Intel Macs are not supported.' },
-  windows: { title: 'Windows · 64-bit', description: 'Windows downloads are temporarily paused while we review security warnings.' },
+  windows: { title: 'Windows · 64-bit', label: 'Windows', format: 'Installer · x64', description: 'Install MinePlot for Windows 10 or 11 (64-bit).' },
   linux: { title: 'Linux · 64-bit', label: 'Linux', format: 'AppImage · x64', description: 'Allow execution as a program in the AppImage’s file properties, then open it. Requires a compatible desktop environment.' },
 };
 const platformButtons = [...document.querySelectorAll('[data-platform]')];
@@ -37,9 +37,9 @@ function selectPlatform(platform) {
   selectedPlatform = platform;
   const value = platforms[platform];
   document.querySelector('#platform-info strong').textContent = value.title;
-  document.querySelector('#platform-info p').textContent = value.description;
+  document.querySelector('#platform-info p').textContent = platform === 'windows' && release?.windowsPaused ? 'Windows downloads are temporarily paused while we review security warnings.' : platform === 'windows' && release && !release.signing.windowsSigned ? 'Unsigned Windows installer. Windows may show an unknown-publisher warning. If your browser or antivirus reports malware, stop and report the detection.' : value.description;
   platformButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.platform === platform)));
-  const underReview = platform === 'windows';
+  const underReview = platform === 'windows' && Boolean(release?.windowsPaused);
   downloadButton.disabled = !release || underReview;
   if (underReview) {
     downloadButton.textContent = 'Windows download under review';
@@ -50,7 +50,7 @@ function selectPlatform(platform) {
     downloadButton.append(format);
   }
   if (!release) return;
-  const note = underReview ? 'Windows downloads paused' : platform === 'macos' ? 'Signed and notarized · ' + value.format : value.format;
+  const note = underReview ? 'Windows downloads paused' : platform === 'macos' ? 'Signed and notarized · ' + value.format : platform === 'windows' ? (release.signing.windowsSigned ? 'Signed · ' : 'Unsigned · Manual updates · ') + value.format : value.format;
   document.querySelector('#release-note').textContent = `v${release.version} · ${note}`;
   checksumsLink.href = release.checksumsUrl;
   const item = release.platforms[platform];
